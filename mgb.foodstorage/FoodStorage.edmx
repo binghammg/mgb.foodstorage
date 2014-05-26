@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FoodStorageModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="FoodStorageModelStoreContainer">
+          <EntitySet Name="StorageThreshold" EntityType="FoodStorageModel.Store.StorageThreshold" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StoredItem" EntityType="FoodStorageModel.Store.StoredItem" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="StorageThreshold">
+          <Key>
+            <PropertyRef Name="StorageThresholdId" />
+          </Key>
+          <Property Name="StorageThresholdId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StoredItemId" Type="int" Nullable="false" />
+          <Property Name="Threshold" Type="int" />
+        </EntityType>
+        <EntityType Name="StoredItem">
+          <Key>
+            <PropertyRef Name="StoredItemId" />
+          </Key>
+          <Property Name="StoredItemId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="150" />
+          <Property Name="Barcode" Type="varchar" MaxLength="50" />
+          <Property Name="DateAdded" Type="date" />
+          <Property Name="ExpirationDate" Type="date" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FoodStorageModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="FoodStorageEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="StorageThresholds" EntityType="FoodStorageModel.StorageThreshold" />
+          <EntitySet Name="StoredItems" EntityType="FoodStorageModel.StoredItem" />
+        </EntityContainer>
+        <EntityType Name="StorageThreshold">
+          <Key>
+            <PropertyRef Name="StorageThresholdId" />
+          </Key>
+          <Property Name="StorageThresholdId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="StoredItemId" Type="Int32" Nullable="false" />
+          <Property Name="Threshold" Type="Int32" />
+        </EntityType>
+        <EntityType Name="StoredItem">
+          <Key>
+            <PropertyRef Name="StoredItemId" />
+          </Key>
+          <Property Name="StoredItemId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="Barcode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DateAdded" Type="DateTime" Precision="0" />
+          <Property Name="ExpirationDate" Type="DateTime" Precision="0" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FoodStorageModelStoreContainer" CdmEntityContainer="FoodStorageEntities">
+          <EntitySetMapping Name="StorageThresholds">
+            <EntityTypeMapping TypeName="FoodStorageModel.StorageThreshold">
+              <MappingFragment StoreEntitySet="StorageThreshold">
+                <ScalarProperty Name="StorageThresholdId" ColumnName="StorageThresholdId" />
+                <ScalarProperty Name="StoredItemId" ColumnName="StoredItemId" />
+                <ScalarProperty Name="Threshold" ColumnName="Threshold" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StoredItems">
+            <EntityTypeMapping TypeName="FoodStorageModel.StoredItem">
+              <MappingFragment StoreEntitySet="StoredItem">
+                <ScalarProperty Name="StoredItemId" ColumnName="StoredItemId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+                <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+                <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
