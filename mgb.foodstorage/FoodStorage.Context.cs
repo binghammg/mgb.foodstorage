@@ -25,7 +25,8 @@ namespace mgb.foodstorage
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<StorageThreshold> StorageThresholds { get; set; }
+        public DbSet<CatBarcodeMap> CatBarcodeMaps { get; set; }
+        public DbSet<Category> Categories { get; set; }
         public DbSet<StoredItem> StoredItems { get; set; }
     }
 }

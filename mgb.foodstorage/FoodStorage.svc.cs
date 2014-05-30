@@ -10,9 +10,18 @@ namespace mgb.foodstorage
 {    
     public class FoodStorage : IFoodStorage
     {
-        public void AddItem()
+        public void AddItem(int CategoryId, string Description, string Barcode)
         {
+            using (FoodStorageEntities fs = new FoodStorageEntities())
+            {
+                StoredItem si = new StoredItem();
+                si.CategoryId = CategoryId;
+                si.Description = Description;
+                si.Barcode = Barcode;
+                si.DateAdded = DateTime.Now;
 
+                fs.StoredItems.Add(si);
+            }
         }
 
         public void DeleteItem()

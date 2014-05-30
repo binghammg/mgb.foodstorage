@@ -12,10 +12,9 @@ namespace mgb.foodstorage
     using System;
     using System.Collections.Generic;
     
-    public partial class StorageThreshold
+    public partial class CatBarcodeMap
     {
-        public int StorageThresholdId { get; set; }
-        public int StoredItemId { get; set; }
-        public Nullable<int> Threshold { get; set; }
+        public int CategoryId { get; set; }
+        public string Barcode { get; set; }
     }
 }

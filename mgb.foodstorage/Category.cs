@@ -12,13 +12,10 @@ namespace mgb.foodstorage
     using System;
     using System.Collections.Generic;
     
-    public partial class StoredItem
+    public partial class Category
     {
-        public int StoredItemId { get; set; }
         public int CategoryId { get; set; }
         public string Description { get; set; }
-        public string Barcode { get; set; }
-        public Nullable<System.DateTime> DateAdded { get; set; }
-        public Nullable<System.DateTime> DateRemoved { get; set; }
+        public Nullable<int> StorageThreshold { get; set; }
     }
 }

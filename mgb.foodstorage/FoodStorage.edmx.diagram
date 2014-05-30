@@ -4,9 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9bcb6bc4c6f547b5a71efb39c2e77be1" Name="Diagram1">
-        <EntityTypeShape EntityType="FoodStorageModel.StorageThreshold" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="FoodStorageModel.StoredItem" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="8fc7c28098aa4326827b35b128c6b42a" Name="Diagram1">
+        <EntityTypeShape EntityType="FoodStorageModel.CatBarcodeMap" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodStorageModel.Category" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodStorageModel.StoredItem" Width="1.5" PointX="4.625" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
