@@ -13,7 +13,7 @@ namespace mgb.foodstorage
     {
                 
         [OperationContract]
-        void AddItem();
+        void AddItem(int CategoryId, string Description, string Barcode);
         
         [OperationContract]
         void DeleteItem();

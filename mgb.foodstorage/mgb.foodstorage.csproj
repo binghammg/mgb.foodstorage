@@ -126,6 +126,7 @@
       <DependentUpon>FoodStorage.edmx</DependentUpon>
       <LastGenOutput>FoodStorage.cs</LastGenOutput>
     </Content>
+    <None Include="Properties\PublishProfiles\Publish.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -146,7 +147,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>65261</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:57254/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

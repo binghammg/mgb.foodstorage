@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Web
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mgb.foodstorage", "mgb.foodstorage\mgb.foodstorage.csproj", "{75962C1E-2607-4393-B10F-414936453CB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testapp", "testapp\testapp.csproj", "{F8626E4D-2FF0-4412-A43F-909FE8C07A52}"
+	ProjectSection(ProjectDependencies) = postProject
+		{75962C1E-2607-4393-B10F-414936453CB1} = {75962C1E-2607-4393-B10F-414936453CB1}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +18,10 @@ Global
 		{75962C1E-2607-4393-B10F-414936453CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75962C1E-2607-4393-B10F-414936453CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75962C1E-2607-4393-B10F-414936453CB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8626E4D-2FF0-4412-A43F-909FE8C07A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8626E4D-2FF0-4412-A43F-909FE8C07A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8626E4D-2FF0-4412-A43F-909FE8C07A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8626E4D-2FF0-4412-A43F-909FE8C07A52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
