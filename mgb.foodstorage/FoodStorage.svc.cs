@@ -76,14 +76,14 @@ namespace mgb.foodstorage
         {
             using(FoodStorageEntities fs = new FoodStorageEntities())
             {
-                var Item = (from si
-                            in fs.StoredItems
-                            where si.StoredItemId == iStoredItemId
-                            select si);
-                
-                Item.DateRemoved = DateTime.Now;  //**** TODO: How do I update this date?????
+                StoredItem Item = (from si
+                                   in fs.StoredItems
+                                   where si.StoredItemId == iStoredItemId
+                                   select si).FirstOrDefault();
+
+                Item.DateRemoved = DateTime.Now;
                 fs.SaveChanges();
-            }
+            }            
         }
 
         public void UpdateItem()

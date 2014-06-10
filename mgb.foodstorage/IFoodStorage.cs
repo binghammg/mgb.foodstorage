@@ -11,16 +11,24 @@ namespace mgb.foodstorage
     [ServiceContract]
     public interface IFoodStorage
     {
-                
+        [OperationContract]
+        int GetCategoryId(string sBarCode);
+
+        [OperationContract]
+        void MapBarCodeToCategory(String sBarCode, int iCategoryId);
+
         [OperationContract]
         void AddItem(int CategoryId, string Description, string Barcode);
-        
+
         [OperationContract]
-        void DeleteItem();
-        
+        StoredItem[] GetItems(String sBarCode);
+
+        [OperationContract]
+        void RemoveItem(int iStoredItemId);
+
         [OperationContract]
         void UpdateItem();
-
+                      
         [OperationContract]
         void AddThreshold();
 
@@ -32,8 +40,6 @@ namespace mgb.foodstorage
 
         [OperationContract]
         void GetAllItems();
-
-        [OperationContract]
-        void GetItem();
+                
     }    
 }
